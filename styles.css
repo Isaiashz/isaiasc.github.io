@@ -1,0 +1,115 @@
+:root {
+    --heart-color: #ff5873;
+    --hover-color: #C1275C;
+    --background-color: #9000ad;
+    --white: #fdffd1; /* Color blanco suave */
+    --button-hover: #6C3483;
+    --button-shadow: rgba(0, 0, 0, 0.2);
+    --negative-bg: #fff;
+    --negative-text: #ff5873;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    color: var(--heart-color);
+    /* Fondo con degradado hacia el centro */
+    background: radial-gradient(circle, rgba(144, 0, 173, 0.6) 0%, rgba(50, 0, 62, 1) 80%);
+    background-size: 50%;
+    background-position: center;
+}
+
+.card {
+    background-color: var(--white); /* Fondo de la tarjeta en blanco suave */
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    width: 320px;
+    box-shadow: 0 8px 16px var(--button-shadow); /* Sombra en la tarjeta */
+}
+
+.title {
+    font-size: 26px;
+    margin-top: 0;
+    color: var(--background-color); /* Color del título */
+}
+
+.yo {
+    font-family: 'Lobster', cursive; /* Tipografía Lobster */
+    font-size: 26px;
+    color: #000; /* Color negro */
+    margin-top: 0;
+    text-align: center; /* Centrar el texto */
+}
+
+.no {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    color: #000; /* Color negro */
+    margin-top: 0;
+    text-align: center;
+}
+
+
+.heart {
+    width: 150px;
+    height: 150px;
+    background: url('images/heart.png') no-repeat center;
+    background-size: contain;
+    margin: 0 auto 20px;
+}
+
+.button {
+    background-color: var(--heart-color); /* Color del botón principal */
+    color: var(--white); /* Texto en blanco */
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    margin: 10px 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px var(--button-shadow); /* Sombra del botón */
+}
+
+.button:hover {
+    background-color: var(--hover-color); /* Efecto hover con color más oscuro */
+    box-shadow: 0 6px 12px var(--button-shadow);
+}
+
+.button.button__negative {
+    background-color: var(--negative-bg); /* Fondo blanco del botón negativo */
+    color: var(--negative-text); /* Texto rosa */
+    border: 2px solid var(--negative-text); /* Borde rosa */
+}
+
+.button.button__negative:hover {
+    background-color: var(--negative-text); /* Fondo rosa en hover */
+    color: var(--negative-bg); /* Texto blanco en hover */
+}
+
+.button.button__error {
+    display: none;
+    width: 100%;
+}
+
+.button:focus {
+    outline: none; /* Quitar borde al hacer clic */
+}
+
+.text {
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
