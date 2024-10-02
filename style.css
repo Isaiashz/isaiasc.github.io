@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: -webkit-radial-gradient(#fffb00, #000000);
+    overflow: hidden;
+    margin: 0; /* Asegurar que no haya espacio adicional en los márgenes */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: justify;
+    align-items: center; /* Centrar horizontalmente en dispositivos móviles */
+}
+
+.container span {
+    font-size: 90pt;
+    font-weight: bold;
+    font-family: "Fredoka One";
+    cursor: pointer;
+    transition: color 300ms ease-in-out; /* Transición del color */
+    position: relative; /* Ajuste para las seudoclases */
+    animation: color-blink 2s infinite alternate; /* Animación del parpadeo */
+}
+
+.container span::before {
+    content: var(--l);
+    position: absolute;
+    transform: scale(1.0);
+    filter: blur(13px);
+}
+
+#ultimo + div {
+    visibility: hidden;
+}
+
+.container span:hover {
+    text-shadow: 0 0 11px #ffffff; /* Sombra de texto al pasar el cursor */
+}
+
+/* Agrega estilos a otros elementos al pasar el cursor */
+
+.container {
+    animation: fadeIn 7s ease; /* Animación de aparición */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes color-blink {
+    0% {
+        color: inherit;
+    }
+    50% {
+        color: #ff00aa; /* Color de las letras durante el parpadeo */
+    }
+    100% {
+        color: inherit;
+    }
+}
